@@ -1,0 +1,24 @@
+{
+  "name": "princejona",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx nue build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrinceJonaa/princejona.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrinceJonaa/princejona/issues"
+  },
+  "homepage": "https://github.com/PrinceJonaa/princejona#readme",
+  "dependencies": {
+    "animejs": "^4.0.0",
+    "nue": "^0.7.1"
+  }
+}
