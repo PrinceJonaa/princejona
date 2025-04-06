@@ -4,7 +4,7 @@
   "description": "Website",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/nue build"
+    "build": "nue build"
   },
   "repository": {
     "type": "git",
