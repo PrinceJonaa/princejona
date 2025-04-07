@@ -1,8 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prince Jona
+
+**Artist. Technologist. Seeker of truth.**  
+*A.I Creator, Vlogger & Peer Advocate*
+
+---
+
+## The Second Coming of Sound
+
+This is more than a website.  
+It is a living canvas, a digital sanctuary, a portal into the fusion of art and technology.  
+A space where presence meets innovation, where code becomes poetry,  
+and where the search for truth echoes in every pixel and soundwave.
+
+---
+
+## About This Project
+
+Built with [Next.js](https://nextjs.org), this project is a living portfolio and a testament to the power of intentional creation.  
+It is a home for my art, my ideas, my innovations — an evolving expression of who I am and what I stand for.
+
+---
+
+## Intervised LLC
+
+**Co-owned by Prince Jona and Reina Hondo** ([@challenges_inlife](https://instagram.com/challenges_inlife))  
+An internet company dedicated to empowering creators and brands.
+
+**Your brand, our obsession.**  
+Professional solutions for creative minds — from branding and digital strategy to AI solutions and content creation.
+
+Family-driven, rooted in authenticity, collaboration, and innovation.
+
+**Promo:** $50 Deal ongoing — [Learn more](https://square.link/u/mSfBAvKJ?src=sheet)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+To run this project locally:
 
 ```bash
 npm run dev
@@ -14,23 +49,32 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Philosophy
 
-## Learn More
+This is not just code.  
+It is an invitation to experience, not just consume.  
+Built with clarity, presence, and ethics in mind.  
+A reflection of intention, integrity, and the pursuit of meaning.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Connect with Me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **All Socials:** [linktr.ee/princejona](https://linktr.ee/princejona)
+- **Instagram:** [instagram.com/princejonaa](https://instagram.com/princejonaa)
+- **Twitch:** [twitch.tv/princejonaa](https://twitch.tv/princejonaa)
+- **Spotify:** [open.spotify.com/artist/4oLxy1WTGaWi2D5bCwRkzP](https://open.spotify.com/artist/4oLxy1WTGaWi2D5bCwRkzP)
+- **YouTube:** [youtube.com/@princejona](https://www.youtube.com/@princejona)
+- **TikTok:** [tiktok.com/@princejonaofficial](https://www.tiktok.com/@princejonaofficial)
+- **Location:** United States
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is a living work of art and technology.  
+Use it with respect, build with intention, and always seek the truth.
