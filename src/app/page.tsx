@@ -2,15 +2,14 @@
 
 import React from "react";
 import { useRef } from "react";
-const anime = require("animejs");
+import { animate } from "animejs";
 
 export default function Home() {
   const headingRef = useRef<HTMLHeadingElement>(null);
 
   const handleClick = () => {
     if (headingRef.current) {
-      anime({
-        targets: headingRef.current,
+      animate(headingRef.current, {
         translateY: -20,
         direction: "alternate",
         duration: 500,
