@@ -1,5 +1,11 @@
 import { notFound } from "next/navigation";
 
+interface IdentityPageProps {
+  params: {
+    slug: string;
+  };
+}
+
 const identities = {
   "prince-jona": {
     name: "Prince Jona",
@@ -21,7 +27,7 @@ const identities = {
   },
 };
 
-export default function IdentityPage({ params }: { params: { slug: string } }) {
+export default function IdentityPage({ params }: IdentityPageProps) {
   const identity = identities[params.slug as keyof typeof identities];
 
   if (!identity) return notFound();
