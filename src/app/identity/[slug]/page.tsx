@@ -27,7 +27,7 @@ const identities = {
   },
 };
 
-export default function IdentityPage({ params }: IdentityPageProps) {
+export default async function IdentityPage({ params }: IdentityPageProps) {
   const identity = identities[params.slug as keyof typeof identities];
 
   if (!identity) return notFound();
