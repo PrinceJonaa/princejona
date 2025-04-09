@@ -21,7 +21,7 @@ const identities = {
   },
 };
 
-export default async function IdentityPage({
+export default async function Page({
   params,
 }: {
   params: { slug: string };
