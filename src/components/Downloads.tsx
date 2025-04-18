@@ -9,7 +9,7 @@ const mockPosts = [
   {
     title: "Voice Note – Divine Recall",
     type: "audio",
-    desc: "A raw download on aligning memory with Presence.",
+    desc: "A raw download on aligning memory with Presencee.",
   },
   {
     title: "Clip – Unmasking Limitation",
