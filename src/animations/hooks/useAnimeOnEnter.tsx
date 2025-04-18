@@ -9,8 +9,10 @@ import { animate } from 'animejs';
  * @param selector - CSS selector for the target element(s)
  * @param config - Anime.js animation configuration object
  */
-export function useAnimeOnEnter(selector: string, config: any) {
+import { AnimationParams } from 'animejs';
+
+export function useAnimeOnEnter(selector: string, config: AnimationParams) {
   useEffect(() => {
     animate(selector, config);
-  }, []);
+  }, [selector, config]);
 }
