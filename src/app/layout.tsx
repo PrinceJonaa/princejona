@@ -60,6 +60,54 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="manifest" href="/manifest.json" />
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  url: "https://princejona.com",
+                  name: "Prince Jona",
+                  description:
+                    "The official site of Prince Jona — NYC artist, technologist, and seeker of truth. Music, AI frameworks, storytelling, and the second coming of presence.",
+                  author: {
+                    "@type": "Person",
+                    name: "Prince Jona",
+                  },
+                  publisher: {
+                    "@type": "Person", // Or Organization if applicable
+                    name: "Prince Jona",
+                  },
+                  inLanguage: "en-US",
+                },
+                {
+                  "@type": "Person",
+                  name: "Prince Jona",
+                  url: "https://princejona.com",
+                  sameAs: [
+                    // Add social media/other relevant profile links here
+                    // e.g., "https://twitter.com/princejonaa",
+                    // "https://www.linkedin.com/in/yourprofile",
+                    // "https://github.com/yourusername"
+                  ],
+                  jobTitle: "Artist & Technologist", // Adjust as needed
+                  description:
+                    "NYC artist, technologist, and seeker of truth. Exploring music, AI, and universal principles.",
+                  image: {
+                    "@type": "ImageObject",
+                    url: "https://princejona.com/og.png", // Use a representative image URL
+                    width: 1200,
+                    height: 630,
+                  },
+                  // Add more details if relevant: worksFor, alumniOf, etc.
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

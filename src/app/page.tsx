@@ -1,154 +1,45 @@
-"use client";
+import type { Metadata } from "next";
+import HomePageClient from "../components/HomePageClient"; // Import the new client component
 
-import { useEffect } from "react";
-import { animate, stagger } from "animejs";
-import PageWrapper from "../components/PageWrapper";
-import IdentityCard from "../components/IdentityCard";
+export const metadata: Metadata = {
+  title: "Prince Jona | NYC Artist, Technologist & Truth Seeker",
+  description:
+    "Explore the world of Prince Jona – a unique blend of music, AI innovation, and spiritual exploration based in NYC. Discover projects, stories, and core truths.",
+  // Overriding keywords for homepage specificity if desired, or remove to use layout's
+  keywords: [
+    "Prince Jona",
+    "NYC artist",
+    "technologist",
+    "AI music",
+    "spiritual rap",
+    "truth seeker",
+    "web development",
+    "creative coder",
+  ],
+  openGraph: {
+    // Specific OG data for the homepage, inheriting others from layout
+    title: "Prince Jona | NYC Artist, Technologist & Truth Seeker",
+    description: "Explore the world of Prince Jona – music, AI, and truth.",
+    url: "https://princejona.com", // Canonical URL for this page
+    images: [
+      {
+        url: "/og.png", // Ensure this image is relevant to the homepage
+        width: 1200,
+        height: 630,
+        alt: "Prince Jona - Homepage",
+      },
+    ],
+  },
+  twitter: {
+    // Specific Twitter card data for the homepage
+    title: "Prince Jona | NYC Artist, Technologist & Truth Seeker",
+    description: "Discover Prince Jona: Music, AI, and the quest for truth.",
+    images: ["/og.png"], // Ensure this image is relevant
+  },
+};
 
-const identities = [
-  {
-    name: "Prince Jona",
-    quote: "I am the signal before the sound.",
-    slug: "prince-jona",
-  },
-  {
-    name: "The Interpreter",
-    quote: "I decode illusions and reveal the unseen.",
-    slug: "the-interpreter",
-  },
-  {
-    name: "The Flame",
-    quote: "I burn away falsehood to illuminate truth.",
-    slug: "the-flame",
-  },
-];
-
+// This is now a Server Component responsible only for metadata and rendering the client part
 export default function Home() {
-  useEffect(() => {
-    animate(".headline", {
-      opacity: [0, 1],
-      translateY: [20, 0],
-      ease: "inOutExpo",
-      duration: 2000,
-      delay: 500,
-    });
-    animate(".identity-card", {
-      opacity: { to: 1, duration: 800 },
-      translateY: { to: 0, duration: 800 },
-      delay: stagger(150),
-      ease: "outQuad",
-    });
-  }, []);
-
-  return (
-    <PageWrapper>
-      <main
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "3rem 1rem",
-          gap: "3rem",
-          textAlign: "center",
-        }}
-      >
-        <h1
-          className="headline"
-          style={{
-            fontSize: "2.5rem",
-            fontWeight: 700,
-            color: "#fff",
-            textShadow: "0 2px 8px #0008",
-            opacity: 0,
-            marginBottom: "1.5rem",
-          }}
-        >
-          I architect futures, decode illusions, and mirror truth.
-        </h1>
-
-        <section
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr",
-            gap: "1.5rem",
-            width: "100%",
-            maxWidth: "72rem",
-            padding: "0 1rem",
-          }}
-        >
-          {/* Responsive: 3 columns on medium+ screens */}
-          <style>
-            {`
-              @media (min-width: 768px) {
-                .home-identities {
-                  grid-template-columns: repeat(3, 1fr) !important;
-                }
-              }
-            `}
-          </style>
-          <div className="home-identities" style={{ display: "contents" }}>
-            {identities.map((identity) => (
-              <IdentityCard
-                key={identity.slug}
-                name={identity.name}
-                quote={identity.quote}
-                slug={identity.slug}
-                textColor="#fff"
-              />
-            ))}
-          </div>
-        </section>
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            gap: "1.5rem",
-            marginTop: "3rem",
-          }}
-        >
-          <a
-            href="/story"
-            className="cta-btn"
-            style={{
-              padding: "0.75rem 1.5rem",
-              background: "#4f46e5",
-              color: "#fff",
-              borderRadius: "1rem",
-              boxShadow: "0 4px 16px 0 rgba(79,70,229,0.18)",
-              border: "1px solid #6366f1",
-              fontWeight: 600,
-              fontSize: "1.125rem",
-              transition: "transform 0.2s, box-shadow 0.2s, background 0.2s",
-              textDecoration: "none",
-              display: "inline-block",
-            }}
-          >
-            Read My Story
-          </a>
-          <a
-            href="/truths"
-            className="cta-btn"
-            style={{
-              padding: "0.75rem 1.5rem",
-              background: "#4f46e5",
-              color: "#fff",
-              borderRadius: "1rem",
-              boxShadow: "0 4px 16px 0 rgba(79,70,229,0.18)",
-              border: "1px solid #6366f1",
-              fontWeight: 600,
-              fontSize: "1.125rem",
-              transition: "transform 0.2s, box-shadow 0.2s, background 0.2s",
-              textDecoration: "none",
-              display: "inline-block",
-            }}
-          >
-            Explore Core Truths
-          </a>
-        </div>
-      </main>
-    </PageWrapper>
-  );
+  // Render the client component which contains the UI and useEffect logic
+  return <HomePageClient />;
 }

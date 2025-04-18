@@ -125,9 +125,9 @@ const SectionNav: React.FC = () => {
                     <span
                       style={{
                         position: "absolute",
-                        left: 10,
+                        left: "50%", // Center horizontally
                         top: "50%",
-                        transform: "translateY(-50%)",
+                        transform: "translate(-50%, -50%)", // Adjust for centering
                         width: 8,
                         height: 8,
                         background: "#a78bfa",
