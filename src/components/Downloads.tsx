@@ -63,7 +63,7 @@ const Downloads: React.FC = () => (
       flexWrap: "wrap",
       justifyContent: "center"
     }}>
-      {mockPosts.map((post, idx) => (
+      {mockPosts.map((post) => (
         <div
           key={post.title}
           style={{

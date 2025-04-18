@@ -31,7 +31,7 @@ const sections = [
 const OriginParallax: React.FC = () => {
   return (
     <div style={{ width: "100%", overflowX: "hidden" }}>
-      {sections.map((section, idx) => (
+      {sections.map((section) => (
         <section
           key={section.label}
           className="min-h-[90vh] flex flex-col justify-center items-center relative z-10 font-sans transition-all duration-500"
