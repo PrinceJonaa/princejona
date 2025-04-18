@@ -3,9 +3,10 @@
  * SectionNav - Vertical, collapsible sidebar navigation (Anime.js + Vanilla CSS)
  * Responsive/collapsible, no Tailwind. Improved collapsed state.
  */
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react"; // Added useMemo
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Script from 'next/script'; // Import Script component for JSON-LD
 
 const sections = [
   { path: "/", label: "Home", icon: "🏠" },
@@ -22,14 +23,87 @@ const sections = [
 const sidebarWidth = 200;
 const collapsedWidth = 60;
 
+// Helper function to generate breadcrumbs
+// Define the type for breadcrumb items, allowing 'item' to be optional
+type BreadcrumbItem = {
+  "@type": "ListItem";
+  position: number;
+  name: string;
+  item?: string; // Make item optional
+};
+
+// Helper function to generate breadcrumbs
+const generateBreadcrumbs = (pathname: string, sections: { path: string; label: string }[]): BreadcrumbItem[] => {
+  const pathSegments = pathname.split('/').filter(segment => segment);
+  const breadcrumbItems: BreadcrumbItem[] = [{ // Use the defined type
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home", // Always start with Home
+    "item": "https://princejona.com/"
+  }];
+
+  let currentPath = '';
+  pathSegments.forEach((segment, index) => {
+    currentPath += `/${segment}`;
+    // Find a matching label from sections or generate one
+    // More robust matching might be needed for dynamic routes like /identity/[slug]
+    const sectionMatch = sections.find(s => s.path === currentPath);
+    // Simple capitalization for segment name if no match found
+    const name = sectionMatch ? sectionMatch.label : segment.charAt(0).toUpperCase() + segment.slice(1).replace('-', ' ');
+
+    // Don't add the current page itself as a link in breadcrumbs
+    const item = (index === pathSegments.length - 1) ? undefined : `https://princejona.com${currentPath}`;
+
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      "position": index + 2, // Start from position 2
+      "name": name,
+      ...(item && { "item": item }) // Only add item URL if it's not the last segment
+    });
+  });
+
+  // Handle cases where the root path '/' is accessed directly
+  if (breadcrumbItems.length === 1 && pathname === '/') {
+     // Optionally remove the item property for the root if it shouldn't be linked
+     // delete breadcrumbItems[0].item;
+  }
+
+  return breadcrumbItems;
+};
+
 const SectionNav: React.FC = () => {
   const [open, setOpen] = useState(true);
   const pathname = usePathname();
 
+  // Generate breadcrumb schema using useMemo
+  const breadcrumbSchema = useMemo(() => {
+    // Exclude root path from breadcrumbs if it's the only item
+    if (pathname === '/') return null;
+
+    const itemListElement = generateBreadcrumbs(pathname, sections);
+    // Only generate schema if there's more than just the 'Home' link
+    if (itemListElement.length <= 1) return null;
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": itemListElement,
+    };
+  }, [pathname]); // Recalculate when pathname changes
+
   return (
-    <nav
-      aria-label="Section Navigation"
-      style={{
+    <> {/* Wrap in fragment to include Script tag */}
+      {/* Inject Breadcrumb Schema */}
+      {breadcrumbSchema && (
+        <Script
+          id="breadcrumb-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
+      <nav
+        aria-label="Section Navigation"
+        style={{
         position: "fixed",
         top: 0,
         left: 0,
@@ -168,6 +242,7 @@ const SectionNav: React.FC = () => {
         })}
       </div>
     </nav>
+   </> // Add closing fragment tag
   );
 };
 
