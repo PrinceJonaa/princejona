@@ -8,9 +8,10 @@ interface IdentityCardProps {
   name: string;
   quote: string;
   slug: string;
+  textColor?: string; // Optional custom color for name/title
 }
 
-export default function IdentityCard({ name, quote, slug }: IdentityCardProps) {
+export default function IdentityCard({ name, quote, slug, textColor }: IdentityCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -38,10 +39,32 @@ export default function IdentityCard({ name, quote, slug }: IdentityCardProps) {
     <Link href={`/identity/${slug}`}>
       <div
         ref={cardRef}
-        className="relative p-6 border rounded-lg shadow-md cursor-pointer transition-transform duration-300 bg-black/20 hover:bg-black/30"
+        className="identity-card"
+        id={slug}
+        style={{
+          position: "relative",
+          padding: "1.5rem",
+          border: "1px solid rgba(255,255,255,0.08)",
+          borderRadius: "0.75rem",
+          boxShadow: "0 2px 12px 0 rgba(0,0,0,0.12)",
+          background: "rgba(0,0,0,0.20)",
+          cursor: "pointer",
+          transition: "transform 0.3s, background 0.3s",
+          opacity: 0,
+          transform: "translateY(20px)",
+        }}
       >
-        <h2 className="text-2xl font-semibold mb-2">{name}</h2>
-        <p className="italic text-gray-300">{quote}</p>
+        <h2
+          style={{
+            color: textColor || "#fff",
+            fontSize: "1.5rem",
+            fontWeight: "bold",
+            marginBottom: "0.5rem",
+          }}
+        >
+          {name}
+        </h2>
+        <p style={{ color: "#fff", opacity: 0.8, fontStyle: "italic" }}>{quote}</p>
       </div>
     </Link>
   );

@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { animate } from "animejs";
+import { animate, stagger } from "animejs";
+import PageWrapper from "../components/PageWrapper";
 import IdentityCard from "../components/IdentityCard";
 
 const identities = [
@@ -31,38 +32,123 @@ export default function Home() {
       duration: 2000,
       delay: 500,
     });
+    animate(".identity-card", {
+      opacity: { to: 1, duration: 800 },
+      translateY: { to: 0, duration: 800 },
+      delay: stagger(150),
+      ease: "outQuad",
+    });
   }, []);
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen px-4 py-12 text-center space-y-12">
-      <h1 className="headline text-4xl md:text-6xl font-bold opacity-0">
-        I architect futures, decode illusions, and mirror truth.
-      </h1>
+    <PageWrapper>
+      <main
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "3rem 1rem",
+          gap: "3rem",
+          textAlign: "center",
+        }}
+      >
+        <h1
+          className="headline"
+          style={{
+            fontSize: "2.5rem",
+            fontWeight: 700,
+            color: "#fff",
+            textShadow: "0 2px 8px #0008",
+            opacity: 0,
+            marginBottom: "1.5rem",
+          }}
+        >
+          I architect futures, decode illusions, and mirror truth.
+        </h1>
 
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl px-4">
-        {identities.map((identity) => (
-          <IdentityCard
-            key={identity.slug}
-            name={identity.name}
-            quote={identity.quote}
-            slug={identity.slug}
-          />
-        ))}
-      </section>
-      <div className="flex flex-wrap justify-center gap-4 mt-12">
-        <a
-          href="/story"
-          className="px-6 py-3 border rounded-full hover:bg-black/20 transition"
+        <section
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr",
+            gap: "1.5rem",
+            width: "100%",
+            maxWidth: "72rem",
+            padding: "0 1rem",
+          }}
         >
-          Read My Story
-        </a>
-        <a
-          href="/truths"
-          className="px-6 py-3 border rounded-full hover:bg-black/20 transition"
+          {/* Responsive: 3 columns on medium+ screens */}
+          <style>
+            {`
+              @media (min-width: 768px) {
+                .home-identities {
+                  grid-template-columns: repeat(3, 1fr) !important;
+                }
+              }
+            `}
+          </style>
+          <div className="home-identities" style={{ display: "contents" }}>
+            {identities.map((identity) => (
+              <IdentityCard
+                key={identity.slug}
+                name={identity.name}
+                quote={identity.quote}
+                slug={identity.slug}
+                textColor="#fff"
+              />
+            ))}
+          </div>
+        </section>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "1.5rem",
+            marginTop: "3rem",
+          }}
         >
-          Explore Core Truths
-        </a>
-      </div>
-    </main>
+          <a
+            href="/story"
+            className="cta-btn"
+            style={{
+              padding: "0.75rem 1.5rem",
+              background: "#4f46e5",
+              color: "#fff",
+              borderRadius: "1rem",
+              boxShadow: "0 4px 16px 0 rgba(79,70,229,0.18)",
+              border: "1px solid #6366f1",
+              fontWeight: 600,
+              fontSize: "1.125rem",
+              transition: "transform 0.2s, box-shadow 0.2s, background 0.2s",
+              textDecoration: "none",
+              display: "inline-block",
+            }}
+          >
+            Read My Story
+          </a>
+          <a
+            href="/truths"
+            className="cta-btn"
+            style={{
+              padding: "0.75rem 1.5rem",
+              background: "#4f46e5",
+              color: "#fff",
+              borderRadius: "1rem",
+              boxShadow: "0 4px 16px 0 rgba(79,70,229,0.18)",
+              border: "1px solid #6366f1",
+              fontWeight: 600,
+              fontSize: "1.125rem",
+              transition: "transform 0.2s, box-shadow 0.2s, background 0.2s",
+              textDecoration: "none",
+              display: "inline-block",
+            }}
+          >
+            Explore Core Truths
+          </a>
+        </div>
+      </main>
+    </PageWrapper>
   );
 }

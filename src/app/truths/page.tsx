@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import styles from "./TruthCard.module.css";
+import { scalePop } from "../../animations/core";
 
 const truths = [
   "What you resist is where your identity still lives.",
@@ -12,13 +13,64 @@ const truths = [
 ];
 
 export default function TruthsPage() {
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Animate all truth cards on mount
+    scalePop(`.${styles.coreTruthCard}`);
+  }, []);
+
   return (
-    <main className="flex flex-col items-center justify-center px-4 py-12 space-y-12">
-      <h1 className="text-4xl md:text-5xl font-bold text-center">Core Truths</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full">
-        {truths.map((truth, idx) => (
-          <TruthCard key={idx} text={truth} />
-        ))}
+    <main
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "3rem 1rem",
+        gap: "3rem",
+        background: "linear-gradient(to bottom, #1e1b4b, #312e81, #3730a3)",
+        transition: "background 0.5s",
+      }}
+    >
+      <h1
+        style={{
+          fontSize: "2.5rem",
+          fontWeight: 700,
+          textAlign: "center",
+          color: "#fff",
+          textShadow: "0 2px 8px #0008",
+          marginBottom: "1.5rem",
+        }}
+      >
+        Core Truths
+      </h1>
+      <div
+        ref={gridRef}
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr",
+          gap: "2rem",
+          maxWidth: "72rem",
+          width: "100%",
+        }}
+      >
+        {/* Responsive: 3 columns on medium+ screens */}
+        <style>
+          {`
+            @media (min-width: 768px) {
+              .truths-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+              }
+            }
+          `}
+        </style>
+        <div className="truths-grid" style={{ display: "contents" }}>
+          {truths.map((truth, idx) => (
+            <TruthCard key={idx} text={truth} />
+          ))}
+        </div>
       </div>
     </main>
   );
@@ -28,23 +80,24 @@ function TruthCard({ text }: { text: string }) {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <motion.div
-      onClick={() => setFlipped(!flipped)}
-      className="cursor-pointer perspective"
-      initial={false}
-      animate={{ rotateY: flipped ? 180 : 0 }}
-      transition={{ duration: 0.6 }}
-      style={{ transformStyle: "preserve-3d" }}
+    <div
+      className={styles.perspective}
+      onClick={() => setFlipped((f) => !f)}
+      tabIndex={0}
+      style={{
+        outline: "none",
+      }}
     >
       <div
-        className="p-6 border rounded-lg shadow-md bg-black/20 hover:bg-black/30 text-lg flex items-center justify-center"
+        className={styles.coreTruthCard}
         style={{
           backfaceVisibility: "hidden",
           transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+          transition: "transform 0.6s cubic-bezier(0.4,0.2,0.2,1)",
         }}
       >
         {text}
       </div>
-    </motion.div>
+    </div>
   );
 }

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import SectionNav from "../components/SectionNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,10 +63,21 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ minHeight: "100vh", background: "#11071a" }}
       >
-        {children}
-        <Analytics />
-        <SpeedInsights />
+        <SectionNav />
+        <div
+          id="main-content"
+          style={{
+            marginLeft: 200,
+            transition: "margin-left 0.25s cubic-bezier(.77,0,.18,1)",
+            minHeight: "100vh",
+          }}
+        >
+          {children}
+          <Analytics />
+          <SpeedInsights />
+        </div>
       </body>
     </html>
   );

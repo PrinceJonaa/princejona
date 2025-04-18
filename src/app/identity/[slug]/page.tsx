@@ -24,15 +24,21 @@ const identities = {
 export default async function Page({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const identity = identities[params.slug as keyof typeof identities];
+  const { slug } = await params;
+  const identity = identities[slug as keyof typeof identities];
 
   if (!identity) return notFound();
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen px-4 py-12 text-center space-y-6">
-      <h1 className="text-4xl md:text-6xl font-bold">{identity.name}</h1>
+      <h1
+        className="text-4xl md:text-6xl font-bold"
+        style={{ color: "#fff", textShadow: "0 2px 8px #0008" }}
+      >
+        {identity.name}
+      </h1>
       <p className="italic text-xl text-gray-300">{identity.quote}</p>
       <p className="max-w-2xl text-lg text-gray-400">{identity.description}</p>
     </main>

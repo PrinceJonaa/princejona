@@ -3,6 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Universal palette for font and section color harmony */
+  --color-text-main: #e6e1f5;      /* Soft lavender-white for most text */
+  --color-text-accent: #f6ad55;    /* Gentle gold for highlights */
+  --color-text-muted: #b3a7d6;     /* Muted purple-gray for secondary text */
+  --color-text-dark: #23213a;      /* For use on light backgrounds */
+  --color-bg-main: #11071a;        /* Main dark background */
+  --color-bg-card: #19152b;        /* Card/section backgrounds */
 }
 
 @theme inline {
