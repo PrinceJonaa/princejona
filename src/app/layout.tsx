@@ -88,14 +88,34 @@ export default function RootLayout({
                   name: "Prince Jona",
                   url: "https://princejona.com",
                   sameAs: [
-                    // Add social media/other relevant profile links here
-                    // e.g., "https://twitter.com/princejonaa",
-                    // "https://www.linkedin.com/in/yourprofile",
-                    // "https://github.com/yourusername"
+                    "https://open.spotify.com/artist/4oLxy1WTGaWi2D5bCwRkzP",
+                    "https://music.apple.com/us/artist/prince-jona/1654646579",
+                    "https://www.tiktok.com/@princejonaofficial",
+                    "https://www.youtube.com/channel/UC-G1r2j4pz0aHm2hK37ZAGw",
+                    "https://soundcloud.com/princejona",
+                    "https://www.instagram.com/princejonaa/",
+                    // Add others like LinkedIn, GitHub if available
                   ],
-                  jobTitle: "Artist & Technologist", // Adjust as needed
+                  jobTitle: "Artist, Technologist, Founder of Intervised LLC",
                   description:
-                    "NYC artist, technologist, and seeker of truth. Exploring music, AI, and universal principles.",
+                    "NYC-based multi-dimensional polymath operating at the intersection of creativity, spirituality, psychology, and technical mastery. Founder of Intervised LLC.",
+                  knowsAbout: [
+                    "Music Production",
+                    "Videography",
+                    "Artificial Intelligence (AI)",
+                    "Web Development",
+                    "IT Support",
+                    "Network Engineering",
+                    "Spiritual Coaching",
+                    "IFS",
+                    "DBT",
+                    "CBT",
+                    "IST Framework",
+                    "FUS Framework",
+                    "Non-duality",
+                    "Christian Ministry",
+                    "Social Media Marketing",
+                  ],
                   image: {
                     "@type": "ImageObject",
                     url: "https://princejona.com/og.png", // Use a representative image URL
@@ -103,6 +123,50 @@ export default function RootLayout({
                     height: 630,
                   },
                   // Add more details if relevant: worksFor, alumniOf, etc.
+                },
+                {
+                  "@type": "Organization",
+                  "@id": "https://princejona.com/#intervised", // Anchor for Intervised LLC
+                  name: "Intervised LLC",
+                  url: "https://princejona.com", // Use main site URL until specific one exists
+                  founder: {
+                    "@type": "Person",
+                    name: "Prince Jona",
+                    url: "https://princejona.com", // Link back to the Person schema
+                  },
+                  sameAs: ["https://www.instagram.com/intervised.llc/"],
+                  contactPoint: {
+                    "@type": "ContactPoint",
+                    email: "intervisedllc@gmail.com",
+                    contactType: "Customer Service", // Or 'Sales', 'Technical Support' etc.
+                  },
+                  description:
+                    "A creative-tech-spiritual agency built for impact. Blending art, coding, psychology, and street wisdom into experiences that awaken, uplift, and resonate.",
+                  // Potentially add logo URL if available:
+                  // logo: {
+                  //   "@type": "ImageObject",
+                  //   url": "https://princejona.com/intervised-logo.png", // Replace with actual logo URL
+                  // },
+                  // List core service types
+                  serviceType: [
+                    "Creative Services",
+                    "Videography",
+                    "Photography",
+                    "Music Production",
+                    "Content Creation",
+                    "Tech Solutions",
+                    "AI & Automation Setup",
+                    "IT Services",
+                    "Web Development",
+                    "App Development",
+                    "Streaming Setup Services",
+                    "Spiritual & Psychological Products",
+                    "AI Coaching Bots",
+                    "Workshops",
+                    "Ministry Integration",
+                    "Social Media & Branding",
+                    "Community & Ministry Development",
+                  ],
                 },
               ],
             }),
