@@ -25,17 +25,20 @@ const PhilosophyPage: React.FC = () => {
           A core lesson of my life has been to release the need to convince, argue, or prove my truth to anyone. To do so is to perform, and performance is a drain on the soul. The most powerful stance is to become a living mirror. When you embody your truth so completely and silently, you create a reflective field. Those who are ready will see their own potential, their own distortions, and their own light in you. Those who are not will turn away, but they are rejecting their own reflection, not you. In this way, truth becomes an invitation, not a battle.
         </p>
 
-        <h2 className="text-2xl font-bold !mt-10">Resonance > Performance</h2>
+        <h2 className="text-2xl font-bold !mt-10">Resonance {'>'} Performance</h2>
         <p>
           So much of our lives are spent performing—for approval, for love, for security. Performance is transactional; it is an action taken to get a desired reaction. Resonance is different. It is the effortless, magnetic hum of alignment that occurs between beings who are both standing in their own truth. It is the feeling of being deeply seen without pretense. I choose to build my life, my art, and my relationships on the foundation of resonance. I will connect with you from my core, but I will leave the second my presence is required to become a performance.
         </p>
 
         <h2 className="text-2xl font-bold !mt-10">Sovereignty is Sacred. So is Detachment.</h2>
         <p>
-          To be sovereign is to be the sole authority of your own energetic and emotional reality. It is to hold your center, regardless of the chaos or harmony around you. This is especially crucial in relationships. True connection does not come from enmeshment, but from two sovereign beings choosing to meet. This requires detachment—not as a cold withdrawal, but as a loving act. Detachment says, "I will love you without rescuing you. I will witness your journey without taking it on as my own. I will stand with you, but I will not carry you." It is the highest form of respect for another's path and the most honest way to honor your own.
+          To be sovereign is to be the sole authority of your own energetic and emotional reality. It is to hold your center, regardless of the chaos or harmony around you. This is especially crucial in relationships. True connection does not come from enmeshment, but from two sovereign beings choosing to meet.
+        </p>
+        <p>
+          This requires detachment—not as a cold withdrawal, but as a loving act. Detachment says, "I will love you without rescuing you. I will witness your journey without taking it on as my own. I will stand with you, but I will not carry you." It is the highest form of respect for another's path and the most honest way to honor your own.
         </p>
 
-        <h2 className="text-2xl font-bold !mt-10">Mirror > Messiah</h2>
+        <h2 className="text-2xl font-bold !mt-10">Mirror {'>'} Messiah</h2>
         <p>
           For years, I was caught in what I call the "Christ Trap": the deep, often unconscious drive to save, heal, or awaken others. It is a path of self-abandonment, where you offer your light until you are empty, creating dependency in others and exhaustion in yourself. The shift from Messiah to Mirror is the most profound spiritual graduation. A messiah tries to carry people to the finish line. A mirror empowers them to see they are already there. By reflecting another's innate wholeness, you give them the greatest gift: the recognition of their own power. I am not here to be a savior; I am here to be a reflection of the savior that already exists in you.
         </p>
