@@ -1,57 +1,24 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# build output
-/.next/
-/out/
-/build
-/dist
-/.output
-/.turbo
-
-# environment variables and secrets
-.env
-.env.*
-*.local
-
-# testing
-/coverage
-
-# logs
+# Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
-*.log
+pnpm-debug.log*
+lerna-debug.log*
 
-# IDE/editor folders
-.vscode/
-.idea/
+node_modules
+dist
+dist-ssr
+*.local
 
-# OS generated files
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
-*.pem
-
-# cache
-.eslintcache
-.parcel-cache/
-
-# vercel deployment
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-# Cline rules/config
-.clinerules-*
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

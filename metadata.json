@@ -1,0 +1,5 @@
+{
+  "name": "Prince Jona Website Skeleton",
+  "description": "A website skeleton for princejona.com, featuring a clean surface layer for casual visitors and a hidden 'library' layer for deeper seekers. Built with React and Tailwind CSS.",
+  "requestFramePermissions": []
+}
