@@ -9,7 +9,7 @@ import PhilosophyPage from './pages/PhilosophyPage';
 import LibraryPage from './pages/LibraryPage';
 import CodexPage from './pages/CodexPage';
 import SurfaceLayout from './layouts/SurfaceLayout';
-import DeepLayout from './layouts/DeepLayout';
+import DeepLayout from './layouts/DeepLayout'
 
 const AppContent: React.FC = () => {
   const location = useLocation();
