@@ -1,80 +1,72 @@
 # Prince Jona
 
-**Artist. Technologist. Seeker of truth.**  
-*A.I Creator, Vlogger & Peer Advocate*
+Immersive digital home for artist-technologist Prince Jona. Built with Next.js 15 (App Router) and modern motion libraries, it fuses storytelling, music, and identity work into a responsive, cinematic web experience.
 
----
+## What this project is
+- Next.js single-page experience that introduces Prince Jona through interactive archetypes, story beats, and core truths.
+- Front-end only application instrumented with Vercel Analytics and Speed Insights for performance insight.
+- Tailwind CSS 4 driven styling layered with custom motion (anime.js, framer-motion) to create an intentional, meditative interface.
 
-## The Second Coming of Sound
+## Purpose
+- Serve as the primary digital sanctuary for Prince Jona’s art, mission, and offerings.
+- Provide potential collaborators, fans, and clients with a distilled view of identities, narrative arc, and guiding principles.
+- Support Intervised LLC by framing its ethos and linking out to services, socials, and active promotions.
 
-This is more than a website.  
-It is a living canvas, a digital sanctuary, a portal into the fusion of art and technology.  
-A space where presence meets innovation, where code becomes poetry,  
-and where the search for truth echoes in every pixel and soundwave.
+## Key Features
+- Animated hero statement that fades in with anime.js to set the tone on first load.
+- Identity cards that scale on hover and deep-link into detail pages (staged under `src/app/identity/[slug]`).
+- Scroll-triggered story sections using framer-motion for smooth reveal animations.
+- Flippable “Core Truths” deck that invites interaction and reflection.
+- PWA-friendly metadata (`manifest.json`, Open Graph, Twitter cards) and analytics instrumentation.
 
----
+## Tech Stack
+- Next.js 15 & React 19 (App Router, client components where motion is required)
+- TypeScript for type safety
+- Tailwind CSS 4 with inline theming
+- anime.js & framer-motion for animation primitives
+- Vercel Analytics & Speed Insights for observability
 
-## About This Project
-
-Built with [Next.js](https://nextjs.org), this project is a living portfolio and a testament to the power of intentional creation.  
-It is a home for my art, my ideas, my innovations — an evolving expression of who I am and what I stand for.
-
----
-
-## Intervised LLC
-
-**Co-owned by Prince Jona and Reina Hondo** ([@challenges_inlife](https://instagram.com/challenges_inlife))  
-An internet company dedicated to empowering creators and brands.
-
-**Your brand, our obsession.**  
-Professional solutions for creative minds — from branding and digital strategy to AI solutions and content creation.
-
-Family-driven, rooted in authenticity, collaboration, and innovation.
-
-**Promo:** $50 Deal ongoing — [Learn more](https://square.link/u/mSfBAvKJ?src=sheet)
-
----
-
-## Getting Started
-
-To run this project locally:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Structure
+```
+src/
+  app/
+    layout.tsx          # Global metadata, fonts, and analytics wiring
+    page.tsx            # Landing page with hero and identity grid
+    story/page.tsx      # “The Call / Conflict / Revelation / Mission” timeline
+    truths/page.tsx     # Interactive truths card grid
+    identity/[slug]/    # Identity detail route (currently stored as page.bak.tsx)
+    globals.css         # Tailwind CSS 4 entrypoint and theme variables
+  components/
+    IdentityCard.tsx    # Reusable motion-enabled identity tile
+public/
+  og.png                # Social sharing preview
+  manifest.json         # PWA manifest
+  robots.txt, sitemap.xml
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) in your browser.
+## Getting Started
+1. Ensure Node.js 18.18+ (or any runtime supported by Next.js 15).
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Visit `http://localhost:3000` to explore the experience.
 
----
+## Available Scripts
+- `npm run dev` — start the dev server with Turbopack.
+- `npm run build` — produce a production build.
+- `npm run start` — serve the built app.
+- `npm run lint` — run Next.js linting with the configured ESLint rules.
 
-## Philosophy
+## Content Updates
+- Update the hero identities in `src/app/page.tsx` (`identities` array).
+- Adjust story beats in `src/app/story/page.tsx` (`sections` array).
+- Edit or expand truths in `src/app/truths/page.tsx` (`truths` array).
+- To re-enable identity detail pages, rename `page.bak.tsx` under `src/app/identity/[slug]/` to `page.tsx` and customize the copy.
 
-This is not just code.  
-It is an invitation to experience, not just consume.  
-Built with clarity, presence, and ethics in mind.  
-A reflection of intention, integrity, and the pursuit of meaning.
+## Deployment
+The project is configured for Vercel. Push to the connected repository (or deploy manually with `npx vercel`) and Vercel will build with the production configuration.
 
----
-
-## Connect with Me
-
-- **All Socials:** [linktr.ee/princejona](https://linktr.ee/princejona)
-- **Instagram:** [instagram.com/princejonaa](https://instagram.com/princejonaa)
-- **Twitch:** [twitch.tv/princejonaa](https://twitch.tv/princejonaa)
-- **Spotify:** [open.spotify.com/artist/4oLxy1WTGaWi2D5bCwRkzP](https://open.spotify.com/artist/4oLxy1WTGaWi2D5bCwRkzP)
-- **YouTube:** [youtube.com/@princejona](https://www.youtube.com/@princejona)
-- **TikTok:** [tiktok.com/@princejonaofficial](https://www.tiktok.com/@princejonaofficial)
-- **Location:** United States
-
----
-
-## License
-
-This project is a living work of art and technology.  
-Use it with respect, build with intention, and always seek the truth.
+## Connect
+- Linktree: https://linktr.ee/princejona
+- Instagram: https://instagram.com/princejonaa
+- YouTube: https://www.youtube.com/@princejona
+- TikTok: https://www.tiktok.com/@princejonaofficial

@@ -24,6 +24,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Prince Jona", url: "https://princejona.com" }],
   creator: "Prince Jona",
   metadataBase: new URL("https://princejona.com"),
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
   openGraph: {
     title: "Prince Jona | Music & AI",
     description: "Music. AI. Truth. The intersection of soul and code.",
