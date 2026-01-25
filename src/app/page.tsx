@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import { animate } from "animejs";
+import { motion } from "framer-motion";
 import IdentityCard from "../components/IdentityCard";
 
 const identities = [
@@ -23,21 +22,16 @@ const identities = [
 ];
 
 export default function Home() {
-  useEffect(() => {
-    animate(".headline", {
-      opacity: [0, 1],
-      translateY: [20, 0],
-      ease: "inOutExpo",
-      duration: 2000,
-      delay: 500,
-    });
-  }, []);
-
   return (
     <main className="flex flex-col items-center justify-center min-h-screen px-4 py-12 text-center space-y-12">
-      <h1 className="headline text-4xl md:text-6xl font-bold opacity-0">
+      <motion.h1
+        className="text-4xl md:text-6xl font-bold"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
+      >
         I architect futures, decode illusions, and mirror truth.
-      </h1>
+      </motion.h1>
 
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl px-4">
         {identities.map((identity) => (
