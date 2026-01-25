@@ -16,8 +16,8 @@ export default function TruthsPage() {
     <main className="flex flex-col items-center justify-center px-4 py-12 space-y-12">
       <h1 className="text-4xl md:text-5xl font-bold text-center">Core Truths</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full">
-        {truths.map((truth, idx) => (
-          <TruthCard key={idx} text={truth} />
+        {truths.map((truth) => (
+          <TruthCard key={truth} text={truth} />
         ))}
       </div>
     </main>
