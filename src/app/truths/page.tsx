@@ -28,16 +28,18 @@ function TruthCard({ text }: { text: string }) {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <motion.div
+    <motion.button
+      type="button"
       onClick={() => setFlipped(!flipped)}
-      className="cursor-pointer perspective"
+      className="cursor-pointer perspective w-full h-full text-left appearance-none focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-lg"
+      aria-pressed={flipped}
       initial={false}
       animate={{ rotateY: flipped ? 180 : 0 }}
       transition={{ duration: 0.6 }}
       style={{ transformStyle: "preserve-3d" }}
     >
       <div
-        className="p-6 border rounded-lg shadow-md bg-black/20 hover:bg-black/30 text-lg flex items-center justify-center"
+        className="p-6 border rounded-lg shadow-md bg-black/20 hover:bg-black/30 text-lg flex items-center justify-center w-full h-full"
         style={{
           backfaceVisibility: "hidden",
           transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
@@ -45,6 +47,6 @@ function TruthCard({ text }: { text: string }) {
       >
         {text}
       </div>
-    </motion.div>
+    </motion.button>
   );
 }
