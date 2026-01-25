@@ -21,11 +21,17 @@ const identities = {
   },
 };
 
-export default async function Page({
-  params,
-}: {
-  params: { slug: string };
+// Optimization: Statically generate routes for known identities
+export async function generateStaticParams() {
+  return Object.keys(identities).map((slug) => ({
+    slug,
+  }));
+}
+
+export default async function Page(props: {
+  params: Promise<{ slug: string }>;
 }) {
+  const params = await props.params;
   const identity = identities[params.slug as keyof typeof identities];
 
   if (!identity) return notFound();
