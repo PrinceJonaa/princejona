@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import IdentityCard from "../components/IdentityCard";
 
 const identities = [
@@ -44,18 +45,18 @@ export default function Home() {
         ))}
       </section>
       <div className="flex flex-wrap justify-center gap-4 mt-12">
-        <a
+        <Link
           href="/story"
-          className="px-6 py-3 border rounded-full hover:bg-black/20 transition"
+          className="px-6 py-3 border rounded-full hover:bg-black/20 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none focus-visible:ring-gray-400"
         >
           Read My Story
-        </a>
-        <a
+        </Link>
+        <Link
           href="/truths"
-          className="px-6 py-3 border rounded-full hover:bg-black/20 transition"
+          className="px-6 py-3 border rounded-full hover:bg-black/20 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none focus-visible:ring-gray-400"
         >
           Explore Core Truths
-        </a>
+        </Link>
       </div>
     </main>
   );
