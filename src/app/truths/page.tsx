@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const truths = [
@@ -14,6 +15,14 @@ const truths = [
 export default function TruthsPage() {
   return (
     <main className="flex flex-col items-center justify-center px-4 py-12 space-y-12">
+      <div className="w-full max-w-6xl flex justify-start">
+        <Link
+          href="/"
+          className="text-sm uppercase tracking-widest hover:text-gray-300 transition focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:outline-none rounded-sm"
+        >
+          ← Back
+        </Link>
+      </div>
       <h1 className="text-4xl md:text-5xl font-bold text-center">Core Truths</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full">
         {truths.map((truth) => (

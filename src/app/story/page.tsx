@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useAnimation, useInView } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 const sections = [
@@ -25,6 +26,14 @@ const sections = [
 export default function StoryPage() {
   return (
     <main className="flex flex-col items-center justify-center px-4 py-12 space-y-24">
+      <div className="w-full max-w-3xl flex justify-start">
+        <Link
+          href="/"
+          className="text-sm uppercase tracking-widest hover:text-gray-300 transition focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:outline-none rounded-sm"
+        >
+          ← Back
+        </Link>
+      </div>
       {sections.map((section, idx) => (
         <FadeInSection key={idx} title={section.title} text={section.text} />
       ))}
