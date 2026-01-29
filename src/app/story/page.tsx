@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const sections = [
   {
@@ -33,21 +32,11 @@ export default function StoryPage() {
 }
 
 function FadeInSection({ title, text }: { title: string; text: string }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({ opacity: 1, y: 0 });
-    }
-  }, [inView, controls]);
-
   return (
     <motion.section
-      ref={ref}
       initial={{ opacity: 0, y: 50 }}
-      animate={controls}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 1, ease: "easeOut" }}
       className="max-w-3xl text-center space-y-4"
     >
