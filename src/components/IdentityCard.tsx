@@ -10,7 +10,7 @@ interface IdentityCardProps {
 
 export default function IdentityCard({ name, quote, slug }: IdentityCardProps) {
   return (
-    <Link href={`/identity/${slug}`}>
+    <Link href={`/identity/${slug}`} className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-lg">
       <div
         className="relative p-6 border rounded-lg shadow-md cursor-pointer transition-transform duration-300 bg-black/20 hover:bg-black/30 hover:scale-105"
       >
