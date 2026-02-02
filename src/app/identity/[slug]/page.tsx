@@ -24,9 +24,10 @@ const identities = {
 export default async function Page({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const identity = identities[params.slug as keyof typeof identities];
+  const { slug } = await params;
+  const identity = identities[slug as keyof typeof identities];
 
   if (!identity) return notFound();
 
