@@ -31,7 +31,7 @@ function TruthCard({ text }: { text: string }) {
     <motion.button
       type="button"
       onClick={() => setFlipped(!flipped)}
-      className="cursor-pointer perspective w-full h-full text-left appearance-none focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-lg"
+      className="cursor-pointer perspective w-full h-full text-left appearance-none focus:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg"
       aria-pressed={flipped}
       initial={false}
       animate={{ rotateY: flipped ? 180 : 0 }}
