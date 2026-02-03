@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import IdentityCard from "../components/IdentityCard";
 
 const identities = [
@@ -44,18 +45,19 @@ export default function Home() {
         ))}
       </section>
       <div className="flex flex-wrap justify-center gap-4 mt-12">
-        <a
+        {/* Use Next.js Link for client-side navigation and prefetching */}
+        <Link
           href="/story"
           className="px-6 py-3 border rounded-full hover:bg-black/20 transition"
         >
           Read My Story
-        </a>
-        <a
+        </Link>
+        <Link
           href="/truths"
           className="px-6 py-3 border rounded-full hover:bg-black/20 transition"
         >
           Explore Core Truths
-        </a>
+        </Link>
       </div>
     </main>
   );
