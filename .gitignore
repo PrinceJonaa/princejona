@@ -55,3 +55,6 @@ next-env.d.ts
 
 # Cline rules/config
 .clinerules-*
+
+# local assistant metadata
+.Jules/

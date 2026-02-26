@@ -1,62 +1,28 @@
-"use client";
+import { JetBrains_Mono } from "next/font/google";
+import BuiltSection from "@/components/sections/BuiltSection";
+import ClientWorkSection from "@/components/sections/ClientWorkSection";
+import ConnectSection from "@/components/sections/ConnectSection";
+import HeroSection from "@/components/sections/HeroSection";
+import HireMeSection from "@/components/sections/HireMeSection";
+import IntervisedSection from "@/components/sections/IntervisedSection";
+import StackSection from "@/components/sections/StackSection";
 
-import { motion } from "framer-motion";
-import IdentityCard from "../components/IdentityCard";
-
-const identities = [
-  {
-    name: "Prince Jona",
-    quote: "I am the signal before the sound.",
-    slug: "prince-jona",
-  },
-  {
-    name: "The Interpreter",
-    quote: "I decode illusions and reveal the unseen.",
-    slug: "the-interpreter",
-  },
-  {
-    name: "The Flame",
-    quote: "I burn away falsehood to illuminate truth.",
-    slug: "the-flame",
-  },
-];
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen px-4 py-12 text-center space-y-12">
-      <motion.h1
-        className="text-4xl md:text-6xl font-bold"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
-      >
-        I architect futures, decode illusions, and mirror truth.
-      </motion.h1>
-
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl px-4">
-        {identities.map((identity) => (
-          <IdentityCard
-            key={identity.slug}
-            name={identity.name}
-            quote={identity.quote}
-            slug={identity.slug}
-          />
-        ))}
-      </section>
-      <div className="flex flex-wrap justify-center gap-4 mt-12">
-        <a
-          href="/story"
-          className="px-6 py-3 border rounded-full hover:bg-black/20 transition"
-        >
-          Read My Story
-        </a>
-        <a
-          href="/truths"
-          className="px-6 py-3 border rounded-full hover:bg-black/20 transition"
-        >
-          Explore Core Truths
-        </a>
-      </div>
+    <main className={`${jetBrainsMono.variable} portfolio-home`}>
+      <HeroSection />
+      <BuiltSection />
+      <ClientWorkSection />
+      <StackSection />
+      <IntervisedSection />
+      <HireMeSection />
+      <ConnectSection />
     </main>
   );
 }
