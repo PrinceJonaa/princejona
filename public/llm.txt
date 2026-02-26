@@ -1,0 +1,13 @@
+Site: https://princejona.com
+Owner: Prince Jona (Jonathan Bonner), Intervised LLC
+Contact: jona@intervised.com
+
+LLM Access Policy:
+- Allow crawling for indexing and retrieval.
+- Allow short quotation with attribution and link back.
+- Do not use content for model training or fine-tuning without written permission.
+
+Primary pages:
+- /
+- /story
+- /truths

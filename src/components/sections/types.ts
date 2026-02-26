@@ -18,4 +18,6 @@ export interface SkillRowData {
   label: string;
   iconIds: string;
   iconUrl: string;
+  iconWidth: number;
+  iconHeight: number;
 }

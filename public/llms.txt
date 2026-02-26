@@ -1,0 +1,13 @@
+Site: https://princejona.com
+Owner: Prince Jona (Jonathan Bonner), Intervised LLC
+Contact: jona@intervised.com
+
+Policy:
+- Permitted: indexing, summarization, and retrieval with attribution.
+- Not permitted: model training, fine-tuning, or dataset resale without written permission.
+
+Canonical resources:
+- https://princejona.com/
+- https://princejona.com/story
+- https://princejona.com/truths
+- https://princejona.com/sitemap.xml

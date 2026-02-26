@@ -3,6 +3,12 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  getSiteGraphJsonLd,
+  getVerificationMetadata,
+  siteConfig,
+} from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,38 +21,73 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Prince Jona | Music, AI, and Universal Truth",
-  description: "The official site of Prince Jona — NYC artist, technologist, and seeker of truth. Music, AI frameworks, storytelling, and the second coming of presence.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "Prince Jona | iOS Developer · AI Systems Builder · Founder",
+    template: "%s | Prince Jona",
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  category: "technology",
   keywords: [
-    "Prince Jona", "NYC rapper", "AI artist", "Christian rap", "sadboi music",
-    "truth seeker", "Jesus 2nd Coming", "IST 4.0", "FUS 4.0", "Intervised"
+    "Prince Jona",
+    "Jonathan Bonner",
+    "Intervised LLC",
+    "iOS Developer",
+    "AI Systems Builder",
+    "Full-Stack Engineer",
+    "Swift",
+    "Next.js",
+    "TypeScript",
+    "Brooklyn NY",
   ],
-  authors: [{ name: "Prince Jona", url: "https://princejona.com" }],
-  creator: "Prince Jona",
-  metadataBase: new URL("https://princejona.com"),
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.companyName,
+  alternates: {
+    canonical: "/",
+  },
+  verification: getVerificationMetadata(),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  manifest: "/manifest.json",
   openGraph: {
-    title: "Prince Jona | Music & AI",
-    description: "Music. AI. Truth. The intersection of soul and code.",
-    url: "https://princejona.com",
-    siteName: "Prince Jona",
-    locale: "en_US",
+    title: "Prince Jona | iOS Developer · AI Systems Builder · Founder",
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
     type: "website",
     images: [
       {
-        url: "/og.png",
+        url: siteConfig.ogImagePath,
         width: 1200,
         height: 630,
-        alt: "Prince Jona — Official Site",
+        alt: "Prince Jona — iOS, AI Systems, Intervised LLC",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prince Jona | Music, AI, Truth",
-    description: "Experience music as prophecy. Prince Jona speaks to your soul.",
-    site: "@princejonaa",
-    creator: "@princejonaa",
-    images: ["/og.png"],
+    title: "Prince Jona | iOS Developer · AI Systems Builder · Founder",
+    description: siteConfig.description,
+    site: siteConfig.xHandle,
+    creator: siteConfig.xHandle,
+    images: [siteConfig.ogImagePath],
+  },
+  icons: {
+    icon: [{ url: "/favicon.ico" }],
+    shortcut: [{ url: "/favicon.ico" }],
+    apple: [{ url: "/icon-192x192.png" }],
   },
 };
 
@@ -54,6 +95,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  themeColor: "#0d0d0d",
 };
 
 export default function RootLayout({
@@ -61,17 +103,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isVercelDeployment = process.env.VERCEL === "1";
+
   return (
     <html lang="en">
-      <head>
-        <link rel="manifest" href="/manifest.json" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <JsonLd data={getSiteGraphJsonLd()} />
         {children}
-        <Analytics />
-        <SpeedInsights />
+        {isVercelDeployment ? (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        ) : null}
       </body>
     </html>
   );

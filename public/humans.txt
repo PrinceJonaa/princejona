@@ -1,0 +1,15 @@
+/* TEAM */
+Name: Prince Jona (Jonathan Bonner)
+Role: iOS Developer, AI Systems Builder, Full-Stack Engineer, Founder
+Company: Intervised LLC
+Location: Brooklyn, NY, United States
+Email: jona@intervised.com
+Site: https://princejona.com
+
+/* SOCIAL */
+GitHub: https://github.com/PrinceJonaa
+X: https://twitter.com/PrinceJonaa
+Intervised: https://intervised.com
+
+/* TECH */
+Stack: Next.js, TypeScript, Tailwind CSS, React
