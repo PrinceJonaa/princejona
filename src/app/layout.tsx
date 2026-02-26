@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
@@ -24,11 +24,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Prince Jona", url: "https://princejona.com" }],
   creator: "Prince Jona",
   metadataBase: new URL("https://princejona.com"),
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
   openGraph: {
     title: "Prince Jona | Music & AI",
     description: "Music. AI. Truth. The intersection of soul and code.",
@@ -53,6 +48,12 @@ export const metadata: Metadata = {
     creator: "@princejonaa",
     images: ["/og.png"],
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
