@@ -73,7 +73,7 @@ export const clientProjects: ReadonlyArray<PortfolioProject> = [
     name: "Intervised LLC",
     description: "Creative & technology studio — iOS apps, AI systems, experiential web",
     stack: ["Next.js", "TypeScript", "Tailwind"],
-    href: "https://intervised.com",
+    href: "https://www.intervised.com",
     category: "client",
     projectType: "organization",
   },

@@ -7,19 +7,19 @@ const services: ServiceCardData[] = [
     title: "iOS App Development",
     description: "Native Swift apps, iOS 26 ready, on-device AI integration",
     ctaLabel: "Let's Build →",
-    ctaHref: "https://intervised.com/services",
+    ctaHref: "https://www.intervised.com/services",
   },
   {
     title: "AI Systems",
     description: "Stateful agents, memory systems, truth-aware AI frameworks",
     ctaLabel: "Let's Build →",
-    ctaHref: "https://intervised.com/services",
+    ctaHref: "https://www.intervised.com/services",
   },
   {
     title: "Web & Brand",
     description: "Experiential Next.js sites, full brand identity, booking systems",
     ctaLabel: "Let's Build →",
-    ctaHref: "https://intervised.com/services",
+    ctaHref: "https://www.intervised.com/services",
   },
 ];
 

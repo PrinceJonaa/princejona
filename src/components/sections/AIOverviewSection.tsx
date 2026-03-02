@@ -22,7 +22,7 @@ const keyFacts = [
 ];
 
 const rawBacklinkLinks: BacklinkItem[] = [
-  { name: "Intervised", url: "https://intervised.com", identity: true },
+  { name: "Intervised", url: "https://www.intervised.com", identity: true },
   ...socialProfiles.map((profile) => ({
     name: profile.name,
     url: profile.url,

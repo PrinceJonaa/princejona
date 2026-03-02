@@ -41,7 +41,7 @@ const workEntries: EcosystemEntry[] = [
   {
     id: "intervised",
     name: "Intervised LLC",
-    url: "https://intervised.com",
+    url: "https://www.intervised.com",
     description:
       "Creative and technology studio founded by Prince Jona. Core hub for services and execution.",
     identity: true,

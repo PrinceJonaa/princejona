@@ -1,4 +1,4 @@
-Site: https://princejona.com
+Site: https://www.princejona.com
 Owner: Prince Jona (Jonathan Bonner), Intervised LLC
 Contact: jona@intervised.com
 
@@ -23,7 +23,7 @@ Backlink graph:
 - https://www.tiktok.com/@princejonaofficial
 - https://open.spotify.com/artist/4oLxy1WTGaWi2D5bCwRkzP
 - https://github.com/PrinceJonaa
-- https://intervised.com
+- https://www.intervised.com
 - https://www.intervised.com/team
 - https://heartz4sale.vercel.app/
 - https://heartz4sale.com

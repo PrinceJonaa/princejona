@@ -4,7 +4,7 @@ Role: iOS Developer, AI Systems Builder, Full-Stack Engineer, Founder, Music Art
 Company: Intervised LLC
 Location: Brooklyn, NY, United States
 Email: jona@intervised.com
-Site: https://princejona.com
+Site: https://www.princejona.com
 Related Person: Reina Hondo
 
 /* SOCIAL */
@@ -13,7 +13,7 @@ TikTok: https://www.tiktok.com/@princejonaofficial
 SoundCloud: https://soundcloud.com/princejona
 Spotify: https://open.spotify.com/artist/4oLxy1WTGaWi2D5bCwRkzP
 GitHub: https://github.com/PrinceJonaa
-Intervised: https://intervised.com
+Intervised: https://www.intervised.com
 Intervised Team: https://www.intervised.com/team
 
 /* CONNECTED WORK */

@@ -15,7 +15,7 @@ export default function IntervisedSection() {
 
         <div className="mt-8">
           <a
-            href="https://intervised.com"
+            href="https://www.intervised.com"
             target="_blank"
             rel="noopener noreferrer"
             className="portfolio-btn portfolio-btn-strong"

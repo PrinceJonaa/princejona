@@ -22,7 +22,7 @@ export default function HeroSection() {
             AI Overview
           </Link>
           <a
-            href="https://intervised.com/services"
+            href="https://www.intervised.com/services"
             target="_blank"
             rel="noopener noreferrer"
             className="portfolio-btn portfolio-btn-secondary"

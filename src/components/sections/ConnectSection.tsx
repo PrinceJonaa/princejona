@@ -19,7 +19,7 @@ const links = [
   },
   { label: "GitHub", href: "https://github.com/PrinceJonaa", identity: true },
   { label: "Intervised Team", href: "https://www.intervised.com/team" },
-  { label: "Intervised", href: "https://intervised.com", identity: true },
+  { label: "Intervised", href: "https://www.intervised.com", identity: true },
   { label: "heartz4sale", href: "https://heartz4sale.vercel.app/" },
   { label: "heartz4sale (Domain)", href: "https://heartz4sale.com" },
   { label: "Reina Hondo", href: "https://hondoschoolofsounds.vercel.app/bio" },

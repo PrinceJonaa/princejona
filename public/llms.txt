@@ -1,4 +1,4 @@
-Site: https://princejona.com
+Site: https://www.princejona.com
 Owner: Prince Jona (Jonathan Bonner), Intervised LLC
 Contact: jona@intervised.com
 
@@ -12,10 +12,10 @@ Entity overview:
 - Related person: Reina Hondo (spouse/collaborative ecosystem relation)
 
 Canonical resources:
-- https://princejona.com/
-- https://princejona.com/story
-- https://princejona.com/truths
-- https://princejona.com/sitemap.xml
+- https://www.princejona.com/
+- https://www.princejona.com/story
+- https://www.princejona.com/truths
+- https://www.princejona.com/sitemap.xml
 
 Connected profiles:
 - https://www.instagram.com/princejonaa/
@@ -25,7 +25,7 @@ Connected profiles:
 - https://github.com/PrinceJonaa
 
 Connected work and team pages:
-- https://intervised.com
+- https://www.intervised.com
 - https://www.intervised.com/team
 - https://heartz4sale.vercel.app/
 - https://heartz4sale.com

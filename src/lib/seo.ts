@@ -90,7 +90,7 @@ export const siteConfig = {
   legalName: "Prince Jona (Jonathan Bonner)",
   companyName: "Intervised LLC",
   companySlogan: "Broadcast Outward",
-  url: "https://princejona.com",
+  url: "https://www.princejona.com",
   description:
     "Prince Jona is an iOS Developer, AI Systems Builder, Full-Stack Engineer, and founder of Intervised LLC in Brooklyn, NY.",
   locale: "en_US",
@@ -107,7 +107,7 @@ export const siteConfig = {
     "https://soundcloud.com/princejona",
     "https://www.tiktok.com/@princejonaofficial",
     "https://open.spotify.com/artist/4oLxy1WTGaWi2D5bCwRkzP",
-    "https://intervised.com",
+    "https://www.intervised.com",
     "https://www.intervised.com/team",
   ],
 };
@@ -242,7 +242,7 @@ function toProjectJsonLdNode(project: PortfolioProject) {
     return {
       "@type": "Organization",
       ...baseThing,
-      url: project.href ?? "https://intervised.com",
+      url: project.href ?? "https://www.intervised.com",
       sameAs: ["https://www.intervised.com/team"],
       founder: {
         "@id": personId,
@@ -324,6 +324,9 @@ export function buildPageMetadata({
       creator: siteConfig.xHandle,
       images: [toAbsoluteUrl(siteConfig.ogImagePath)],
     },
+    other: {
+      "twitter:url": absolute,
+    },
   };
 }
 
@@ -404,7 +407,7 @@ export function getSiteGraphJsonLd() {
           "@id": contactPointId,
         },
         mainEntityOfPage: {
-          "@id": `${siteUrl}#profilepage-home`,
+          "@id": `${siteUrl}/#profilepage-home`,
         },
         hasOccupation: [
           { "@type": "Occupation", name: "iOS Developer" },
@@ -467,7 +470,7 @@ export function getSiteGraphJsonLd() {
         "@id": organizationId,
         name: siteConfig.companyName,
         slogan: siteConfig.companySlogan,
-        url: "https://intervised.com",
+        url: "https://www.intervised.com",
         foundingDate: siteConfig.foundedYear,
         founder: {
           "@id": personId,
@@ -491,13 +494,13 @@ export function getSiteGraphJsonLd() {
           { "@id": getWorkPageId("intervised-team") },
           { "@id": `${siteUrl}/#heartz4sale-project` },
         ],
-        sameAs: ["https://intervised.com", "https://www.intervised.com/team"],
+        sameAs: ["https://www.intervised.com", "https://www.intervised.com/team"],
       },
       {
         "@type": "ProfessionalService",
         "@id": `${siteUrl}/#intervised-services`,
         name: siteConfig.companyName,
-        url: "https://intervised.com/services",
+        url: "https://www.intervised.com/services",
         provider: {
           "@id": organizationId,
         },
@@ -553,7 +556,7 @@ export function getSiteGraphJsonLd() {
         "@id": contactPointId,
         contactType: "business inquiries",
         email: `mailto:${siteConfig.email}`,
-        url: `${siteUrl}#connect`,
+        url: `${siteUrl}/#connect`,
         availableLanguage: ["en"],
         areaServed: [
           {
@@ -678,7 +681,7 @@ export function getHomeAiOverviewJsonLd() {
     "@graph": [
       {
         "@type": "ProfilePage",
-        "@id": `${siteUrl}#profilepage-home`,
+        "@id": `${siteUrl}/#profilepage-home`,
         url: siteUrl,
         name: "Prince Jona Portfolio",
         description:
@@ -703,7 +706,7 @@ export function getHomeAiOverviewJsonLd() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": `${siteUrl}#breadcrumbs-home`,
+        "@id": `${siteUrl}/#breadcrumbs-home`,
         itemListElement: [
           {
             "@type": "ListItem",
@@ -715,7 +718,7 @@ export function getHomeAiOverviewJsonLd() {
       },
       {
         "@type": "FAQPage",
-        "@id": `${siteUrl}#faq-home`,
+        "@id": `${siteUrl}/#faq-home`,
         mainEntity: [
           {
             "@type": "Question",
@@ -738,7 +741,7 @@ export function getHomeAiOverviewJsonLd() {
             name: "Where are Prince Jona's official profiles and connected work?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Official profiles include Instagram, TikTok, SoundCloud, Spotify, and GitHub. Connected work and team context include intervised.com/team, heartz4sale.vercel.app, and heartz4sale.com.",
+              text: "Official profiles include Instagram, TikTok, SoundCloud, Spotify, and GitHub. Connected work and team context include www.intervised.com/team, heartz4sale.vercel.app, and heartz4sale.com.",
             },
           },
           {
