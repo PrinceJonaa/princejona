@@ -4,12 +4,12 @@ export default function HeroSection() {
   return (
     <section className="portfolio-section pb-10 pt-20">
       <div className="portfolio-container text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-white md:text-6xl">Prince Jona</h1>
+        <p className="portfolio-kicker">Brooklyn, NY · Intervised LLC</p>
+        <h1 className="portfolio-title-display mt-4 font-bold text-white">Prince Jona</h1>
         <p className="portfolio-muted mx-auto mt-4 max-w-4xl text-base md:text-xl">
           iOS Developer · AI Systems Builder · Full-Stack Engineer · Founder
         </p>
-        <p className="mt-4 text-xl font-medium text-violet-200">iOS · AI Systems · Intervised LLC</p>
-        <p className="portfolio-muted mx-auto mt-4 max-w-4xl text-base leading-relaxed md:text-lg">
+        <p className="portfolio-section-intro mx-auto mt-4 text-base md:text-lg">
           Founder of Intervised LLC · Building The-Arc on iOS 26 · Shipping AI memory systems · Based
           in Brooklyn, NY
         </p>
@@ -17,6 +17,9 @@ export default function HeroSection() {
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Link href="#built" className="portfolio-btn">
             View Work
+          </Link>
+          <Link href="#ai-overview" className="portfolio-btn portfolio-btn-secondary">
+            AI Overview
           </Link>
           <a
             href="https://intervised.com/services"

@@ -31,6 +31,9 @@ export default function StackSection() {
     <section className="portfolio-section">
       <div className="portfolio-container">
         <SectionTitle title="stack" />
+        <p className="portfolio-section-intro mt-4 text-base">
+          Tooling and platforms used across iOS, web, backend, and AI delivery.
+        </p>
         <div className="mt-6 grid gap-4">
           {skillRows.map((row) => (
             <article key={row.label} className="portfolio-stack-row">

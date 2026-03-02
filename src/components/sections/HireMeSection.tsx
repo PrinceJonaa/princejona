@@ -28,6 +28,9 @@ export default function HireMeSection() {
     <section className="portfolio-section">
       <div className="portfolio-container">
         <SectionTitle title="work with me" />
+        <p className="portfolio-section-intro mt-4 text-base">
+          Available for high-impact iOS, AI, and web systems through Intervised.
+        </p>
         <div className="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-3">
           {services.map((service) => (
             <ServiceCard key={service.title} service={service} />

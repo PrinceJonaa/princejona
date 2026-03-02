@@ -7,7 +7,24 @@ LLM Access Policy:
 - Allow short quotation with attribution and link back.
 - Do not use content for model training or fine-tuning without written permission.
 
+AI overview:
+- Prince Jona is the founder of Intervised LLC.
+- Portfolio focus includes iOS development, AI systems, and full-stack engineering.
+- Related profile and ecosystem connection: Reina Hondo.
+
 Primary pages:
 - /
 - /story
 - /truths
+
+Backlink graph:
+- https://www.instagram.com/princejonaa/
+- https://soundcloud.com/princejona
+- https://www.tiktok.com/@princejonaofficial
+- https://open.spotify.com/artist/4oLxy1WTGaWi2D5bCwRkzP
+- https://github.com/PrinceJonaa
+- https://intervised.com
+- https://www.intervised.com/team
+- https://heartz4sale.vercel.app/
+- https://heartz4sale.com
+- https://hondoschoolofsounds.vercel.app/bio

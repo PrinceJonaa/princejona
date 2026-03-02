@@ -6,8 +6,27 @@ Policy:
 - Permitted: indexing, summarization, and retrieval with attribution.
 - Not permitted: model training, fine-tuning, or dataset resale without written permission.
 
+Entity overview:
+- Primary person: Prince Jona (Jonathan Bonner)
+- Company: Intervised LLC (founder: Prince Jona)
+- Related person: Reina Hondo (spouse/collaborative ecosystem relation)
+
 Canonical resources:
 - https://princejona.com/
 - https://princejona.com/story
 - https://princejona.com/truths
 - https://princejona.com/sitemap.xml
+
+Connected profiles:
+- https://www.instagram.com/princejonaa/
+- https://soundcloud.com/princejona
+- https://www.tiktok.com/@princejonaofficial
+- https://open.spotify.com/artist/4oLxy1WTGaWi2D5bCwRkzP
+- https://github.com/PrinceJonaa
+
+Connected work and team pages:
+- https://intervised.com
+- https://www.intervised.com/team
+- https://heartz4sale.vercel.app/
+- https://heartz4sale.com
+- https://hondoschoolofsounds.vercel.app/bio

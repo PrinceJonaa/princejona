@@ -22,7 +22,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), "Inter", "Segoe UI", sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -47,32 +47,6 @@ body {
   /* Prevent text selection on interactive elements */
   button, a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-  }
-}
-
-/* Mobile-specific optimizations */
-@media (hover: none) and (pointer: coarse) {
-  /* Better touch feedback */
-  .cta-btn:active {
-    transform: scale(0.98);
-    box-shadow: 0 2px 8px 0 rgba(79,70,229,0.12) !important;
-  }
-  
-  .identity-card:active {
-    transform: scale(0.98) !important;
-  }
-}
-
-/* Hover effects for desktop */
-@media (hover: hover) and (pointer: fine) {
-  .cta-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px 0 rgba(79,70,229,0.24) !important;
-    background: #4338ca !important;
-  }
-  
-  .identity-card:hover {
-    background: rgba(0,0,0,0.30) !important;
   }
 }
 
@@ -107,6 +81,27 @@ body {
   font-size: 1rem;
   letter-spacing: 0.02em;
   text-transform: lowercase;
+}
+
+.portfolio-section-intro {
+  color: rgba(249, 250, 251, 0.82);
+  max-width: 62ch;
+  line-height: 1.7;
+}
+
+.portfolio-kicker {
+  color: rgba(196, 181, 253, 0.98);
+  font-family: var(--font-jetbrains-mono), var(--font-geist-mono), monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.portfolio-title-display {
+  font-size: clamp(2.4rem, 7.2vw, 4.25rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
 }
 
 .portfolio-muted {
@@ -210,6 +205,37 @@ body {
     border-color 150ms ease;
 }
 
+.portfolio-summary-grid {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.portfolio-summary-chip {
+  margin: 0;
+  border: 1px solid rgba(167, 139, 250, 0.32);
+  background: rgba(124, 58, 237, 0.1);
+  border-radius: 0.8rem;
+  color: rgba(249, 250, 251, 0.94);
+  font-family: var(--font-jetbrains-mono), var(--font-geist-mono), monospace;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  padding: 0.7rem 0.8rem;
+}
+
+.portfolio-embed-shell {
+  border-radius: 0.8rem;
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  background: rgba(17, 17, 17, 0.74);
+  overflow: hidden;
+}
+
+.portfolio-embed-frame {
+  border: 0;
+  width: 100%;
+  display: block;
+}
+
 .portfolio-stack-row {
   background: var(--portfolio-card-bg);
   border: 1px solid var(--portfolio-card-border);
@@ -302,5 +328,9 @@ body {
 
   .portfolio-banner {
     padding: 3rem 2rem;
+  }
+
+  .portfolio-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
