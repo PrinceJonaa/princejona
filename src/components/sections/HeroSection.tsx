@@ -21,6 +21,12 @@ export default function HeroSection() {
           <Link href="#ai-overview" className="portfolio-btn portfolio-btn-secondary">
             AI Overview
           </Link>
+          <Link href="/story" className="portfolio-btn portfolio-btn-secondary">
+            Read Story
+          </Link>
+          <Link href="/truths" className="portfolio-btn portfolio-btn-secondary">
+            Core Truths
+          </Link>
           <a
             href="https://www.intervised.com/services"
             target="_blank"

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useAnimation, useInView } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 const sections = [
@@ -28,6 +29,20 @@ export default function StoryContent() {
       {sections.map((section, idx) => (
         <FadeInSection key={idx} title={section.title} text={section.text} />
       ))}
+      <nav className="flex flex-wrap items-center justify-center gap-3">
+        <Link
+          href="/truths"
+          className="rounded-full border border-white/25 px-4 py-2 text-sm text-white transition-colors hover:border-white/45"
+        >
+          Explore Core Truths
+        </Link>
+        <Link
+          href="/"
+          className="rounded-full border border-white/25 px-4 py-2 text-sm text-white transition-colors hover:border-white/45"
+        >
+          Back to Portfolio
+        </Link>
+      </nav>
     </main>
   );
 }

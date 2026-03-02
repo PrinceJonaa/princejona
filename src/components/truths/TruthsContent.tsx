@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const truths = [
   "What you resist is where your identity still lives.",
@@ -20,6 +21,20 @@ export default function TruthsContent() {
           <TruthCard key={truth} text={truth} />
         ))}
       </div>
+      <nav className="flex flex-wrap items-center justify-center gap-3">
+        <Link
+          href="/story"
+          className="rounded-full border border-white/25 px-4 py-2 text-sm text-white transition-colors hover:border-white/45"
+        >
+          Read the Story
+        </Link>
+        <Link
+          href="/"
+          className="rounded-full border border-white/25 px-4 py-2 text-sm text-white transition-colors hover:border-white/45"
+        >
+          Back to Portfolio
+        </Link>
+      </nav>
     </main>
   );
 }
