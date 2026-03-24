@@ -115,4 +115,14 @@ export const clientProjects: ReadonlyArray<PortfolioProject> = [
     category: "client",
     projectType: "website",
   },
+  {
+    id: "shades",
+    name: "SHADES",
+    description:
+      "Official website for SHADES — an NYC live collective blending R&B, soul, and multicultural grooves.",
+    stack: ["Next.js", "TypeScript"],
+    href: "https://shadesmusicofficial.com",
+    category: "client",
+    projectType: "website",
+  },
 ] as const;

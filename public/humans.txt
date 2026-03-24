@@ -19,6 +19,7 @@ Intervised Team: https://www.intervised.com/team
 /* CONNECTED WORK */
 heartz4sale: https://heartz4sale.com
 Reina Hondo profile: https://hondoschoolofsounds.com/bio
+SHADES: https://shadesmusicofficial.com
 
 /* TECH */
 Stack: Next.js, TypeScript, Tailwind CSS, React

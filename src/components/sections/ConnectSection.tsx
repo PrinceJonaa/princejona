@@ -21,6 +21,7 @@ const links = [
   { label: "Intervised Team", href: "https://www.intervised.com/team" },
   { label: "Intervised", href: "https://www.intervised.com", identity: true },
   { label: "heartz4sale", href: "https://heartz4sale.com" },
+  { label: "SHADES", href: "https://shadesmusicofficial.com" },
   { label: "Reina Hondo", href: "https://hondoschoolofsounds.com/bio" },
   { label: "Email", href: "mailto:jona@intervised.com" },
 ];

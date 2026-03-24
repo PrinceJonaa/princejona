@@ -82,6 +82,14 @@ export const connectedWorkLinks: ReadonlyArray<ConnectedWorkLink> = [
       "Official artist website for hbkrevenge completed by Prince Jona and Intervised.",
     schemaType: "WebSite",
   },
+  {
+    id: "shades",
+    name: "SHADES",
+    url: "https://shadesmusicofficial.com",
+    description:
+      "Official website for SHADES, an NYC live collective blending R&B, soul, and multicultural grooves.",
+    schemaType: "WebSite",
+  },
 ] as const;
 
 export const siteConfig = {
