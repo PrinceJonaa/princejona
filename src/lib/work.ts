@@ -83,7 +83,7 @@ export const clientProjects: ReadonlyArray<PortfolioProject> = [
     description:
       "Official artist website for HBKREVENGE — visuals, show updates, booking flows, and merch entry points.",
     stack: ["React", "Vite", "SEO", "Structured Data"],
-    href: "https://heartz4sale.vercel.app/",
+    href: "https://heartz4sale.com",
     category: "client",
     projectType: "website",
   },
@@ -93,7 +93,7 @@ export const clientProjects: ReadonlyArray<PortfolioProject> = [
     description:
       "Private & group music lessons for kids and adults — piano, violin, viola, flute, percussion. Package-based booking.",
     stack: ["Next.js", "Vercel"],
-    href: "https://hondoschoolofsounds.vercel.app",
+    href: "https://hondoschoolofsounds.com",
     category: "client",
     projectType: "website",
   },

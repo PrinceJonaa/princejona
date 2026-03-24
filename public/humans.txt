@@ -17,9 +17,8 @@ Intervised: https://www.intervised.com
 Intervised Team: https://www.intervised.com/team
 
 /* CONNECTED WORK */
-heartz4sale: https://heartz4sale.vercel.app/
-heartz4sale mirror: https://heartz4sale.com
-Reina Hondo profile: https://hondoschoolofsounds.vercel.app/bio
+heartz4sale: https://heartz4sale.com
+Reina Hondo profile: https://hondoschoolofsounds.com/bio
 
 /* TECH */
 Stack: Next.js, TypeScript, Tailwind CSS, React
