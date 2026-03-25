@@ -1,6 +1,13 @@
 import SectionTitle from "./SectionTitle";
 
 const links = [
+  { label: "Intervised", href: "https://www.intervised.com", identity: true },
+  { label: "Intervised Team", href: "https://www.intervised.com/team" },
+  { label: "heartz4sale", href: "https://heartz4sale.com" },
+  { label: "SHADES", href: "https://shadesmusicofficial.com" },
+  { label: "Hondo School of Sounds", href: "https://hondoschoolofsounds.com" },
+  { label: "Reina Hondo", href: "https://hondoschoolofsounds.com/bio" },
+  { label: "Email", href: "mailto:jona@intervised.com" },
   {
     label: "Instagram",
     href: "https://www.instagram.com/princejonaa/",
@@ -18,12 +25,6 @@ const links = [
     identity: true,
   },
   { label: "GitHub", href: "https://github.com/PrinceJonaa", identity: true },
-  { label: "Intervised Team", href: "https://www.intervised.com/team" },
-  { label: "Intervised", href: "https://www.intervised.com", identity: true },
-  { label: "heartz4sale", href: "https://heartz4sale.vercel.app/" },
-  { label: "heartz4sale (Domain)", href: "https://heartz4sale.com" },
-  { label: "Reina Hondo", href: "https://hondoschoolofsounds.vercel.app/bio" },
-  { label: "Email", href: "mailto:jona@intervised.com" },
 ];
 
 export default function ConnectSection() {

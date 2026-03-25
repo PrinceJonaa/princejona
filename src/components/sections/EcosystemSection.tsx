@@ -65,7 +65,7 @@ const workEntries: EcosystemEntry[] = [
   },
 ];
 
-const ecosystemEntries: EcosystemEntry[] = [...socialEntries, ...workEntries];
+const ecosystemEntries: EcosystemEntry[] = [...workEntries, ...socialEntries];
 
 export default function EcosystemSection() {
   return (

@@ -77,10 +77,17 @@ export const connectedWorkLinks: ReadonlyArray<ConnectedWorkLink> = [
   {
     id: "heartz4sale",
     name: "heartz4sale.com",
-    url: "https://heartz4sale.vercel.app/",
-    alternateUrl: "https://heartz4sale.com",
+    url: "https://heartz4sale.com",
     description:
       "Official artist website for hbkrevenge completed by Prince Jona and Intervised.",
+    schemaType: "WebSite",
+  },
+  {
+    id: "shades",
+    name: "SHADES",
+    url: "https://shadesmusicofficial.com",
+    description:
+      "Official website for SHADES, an NYC live collective blending R&B, soul, and multicultural grooves.",
     schemaType: "WebSite",
   },
 ] as const;
@@ -100,7 +107,7 @@ export const siteConfig = {
   location: "Brooklyn, NY, United States",
   foundedYear: "2021",
   spouseName: "Reina Hondo",
-  spouseProfileUrl: "https://hondoschoolofsounds.vercel.app/bio",
+  spouseProfileUrl: "https://hondoschoolofsounds.com/bio",
   sameAs: [
     "https://github.com/PrinceJonaa",
     "https://www.instagram.com/princejonaa/",
@@ -259,9 +266,6 @@ function toProjectJsonLdNode(project: PortfolioProject) {
       "@type": "WebSite",
       ...creativeWorkBase,
       publisher: project.category === "client" ? { "@id": organizationId } : { "@id": personId },
-      ...(project.id === "heartz4sale"
-        ? { sameAs: ["https://heartz4sale.com"] }
-        : {}),
     };
   }
 
@@ -452,7 +456,7 @@ export function getSiteGraphJsonLd() {
           "@id": organizationId,
         },
         sameAs: [
-          "https://hondoschoolofsounds.vercel.app/",
+          "https://hondoschoolofsounds.com/",
           "https://www.tiktok.com/@challenges_inlife",
         ],
       },
@@ -460,7 +464,7 @@ export function getSiteGraphJsonLd() {
         "@type": "MusicSchool",
         "@id": hondoSchoolId,
         name: "Hondo School of Sounds",
-        url: "https://hondoschoolofsounds.vercel.app/",
+        url: "https://hondoschoolofsounds.com/",
         founder: {
           "@id": spouseId,
         },
@@ -648,7 +652,7 @@ export function getSiteGraphJsonLd() {
         "@type": "CreativeWork",
         "@id": `${siteUrl}/#heartz4sale-project`,
         name: "heartz4sale.com Artist Website",
-        url: "https://heartz4sale.vercel.app/",
+        url: "https://heartz4sale.com",
         creator: [{ "@id": personId }, { "@id": organizationId }],
         isPartOf: {
           "@id": websiteId,
@@ -657,7 +661,6 @@ export function getSiteGraphJsonLd() {
           "@type": "MusicGroup",
           name: "HBKREVENGE",
         },
-        sameAs: ["https://heartz4sale.com"],
       },
       ...profileNodes,
       ...workNodes,
@@ -741,7 +744,7 @@ export function getHomeAiOverviewJsonLd() {
             name: "Where are Prince Jona's official profiles and connected work?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Official profiles include Instagram, TikTok, SoundCloud, Spotify, and GitHub. Connected work and team context include www.intervised.com/team, heartz4sale.vercel.app, and heartz4sale.com.",
+              text: "Official profiles include Instagram, TikTok, SoundCloud, Spotify, and GitHub. Connected work and team context include www.intervised.com/team and heartz4sale.com.",
             },
           },
           {
@@ -789,5 +792,6 @@ export function getWebPageJsonLd({
       url: toAbsoluteUrl(siteConfig.ogImagePath),
     },
     about: [{ "@id": personId }, { "@id": organizationId }],
+    ...(pageType === "ProfilePage" ? { mainEntity: { "@id": personId } } : {}),
   };
 }
