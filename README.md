@@ -1,5 +1,9 @@
 # Prince Jona
 
+
+old website, defunct; 
+
+
 Immersive digital home for artist-technologist Prince Jona. Built with Next.js 15 (App Router) and modern motion libraries, it fuses storytelling, music, and identity work into a responsive, cinematic web experience.
 
 ## What this project is
